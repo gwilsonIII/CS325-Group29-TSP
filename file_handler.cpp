@@ -28,10 +28,10 @@ std::vector<std::vector<int>> file_to_arr(std::string ifile) {
 
 /*
    Params:
-      ofile: string, name of file to output array to.
-      arr:  array to be converted. 
+      ofile: string, name of file to output array to. 
+      arr:  1D vector to be converted. 
 */
-void arr_to_file(std::string ofile, std::vector<std::vector<int>> arr) {
+void arr_to_file(std::string ofile, std::vector<int> arr) {
 
 }
 
