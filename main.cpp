@@ -34,18 +34,15 @@ int main() {
    // convert txt file into 2D vector matrix
    std::string in_file_name  = "tsp_example_1.txt"; 
    std::vector<std::vector<int>> arr = file_to_arr(in_file_name); 
-   std::cout << "PRINTING ARRAY ... 1" << std::endl;
-   print_arr(arr);
+   //print_arr(arr);
 
    // run TSP to find best tour
    std::vector<int> out_arr = tsp(arr);
-   std::cout << "PRINTING ARRAY ... 2" << std::endl;
-   print_arr(out_arr);
+   //print_arr(out_arr);
 
-
-   // convert 2D vector matrix into txt.tour file
+   // write output vector into txt.tour file
    std::string out_file_name  = in_file_name + ".tour"; 
-
+   arr_to_file(out_file_name, out_arr);
 
    return 0;
 }

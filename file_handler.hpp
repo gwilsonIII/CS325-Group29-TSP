@@ -4,6 +4,6 @@
 #include <vector>
 
 std::vector<std::vector<int>> file_to_arr(std::string);
-void arr_to_file(std::string, std::vector<std::vector<int>>);
+void arr_to_file(std::string, std::vector<int>);
 
 #endif /* file_handler_hpp */

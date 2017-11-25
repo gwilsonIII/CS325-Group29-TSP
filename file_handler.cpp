@@ -3,6 +3,7 @@
 #include "file_handler.hpp"
 #include <string>
 #include <vector>
+#include <iterator>
 
 /*
    Params:
@@ -30,9 +31,13 @@ std::vector<std::vector<int>> file_to_arr(std::string ifile) {
    Params:
       ofile: string, name of file to output array to. 
       arr:  1D vector to be converted. 
+   Writes vector into a file.
 */
 void arr_to_file(std::string ofile, std::vector<int> arr) {
-
+   std::ofstream file (ofile);
+   for (int i = 0; i < arr.size(); i++) {
+      file << arr[i] << "\n";
+   }
 }
 
 
