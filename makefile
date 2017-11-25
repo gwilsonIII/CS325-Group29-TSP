@@ -2,7 +2,7 @@
 # 11/26/2017
 
 PROJ = TSP 
-SRC = main file_handler tsp 
+SRC = main file_handler  
 
 CXX = g++
 CXXFLAGS = -std=c++11 
