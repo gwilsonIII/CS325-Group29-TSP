@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
    // convert txt file into 2D vector matrix
    std::string in_file_name  = argv[1]; 
    std::vector<std::vector<int>> adj_matrix = file_to_arr(in_file_name); 
-   //print_arr(arr);
+   print_arr(arr);
 
    // run TSP to find best tour
    std::vector<int> out_arr = tsp(adj_matrix);
