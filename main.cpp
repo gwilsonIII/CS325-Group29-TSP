@@ -4,6 +4,9 @@
 #include "tsp.hpp"
 #include <string>
 #include <vector>
+#include <limits>
+#include <algorithm>
+
 
 /*
    Params: 2D vector 
@@ -29,15 +32,15 @@ void print_arr(std::vector<int> arr) {
 }
 
 
-int main() {
+int main(int argc, char* argv[]) {
    
    // convert txt file into 2D vector matrix
-   std::string in_file_name  = "tsp_example_1.txt"; 
-   std::vector<std::vector<int>> arr = file_to_arr(in_file_name); 
+   std::string in_file_name  = argv[1]; 
+   std::vector<std::vector<int>> adj_matrix = file_to_arr(in_file_name); 
    //print_arr(arr);
 
    // run TSP to find best tour
-   std::vector<int> out_arr = tsp(arr);
+   std::vector<int> out_arr = tsp(adj_matrix);
    //print_arr(out_arr);
 
    // write output vector into txt.tour file
