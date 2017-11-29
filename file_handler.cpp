@@ -63,11 +63,16 @@ std::vector<std::vector<int>> file_to_arr(std::string ifile) {
    Params:
       ofile: string, name of file to output array to. 
       arr:  1D vector to be converted. 
+      cost: int, cost of tour
    Writes vector into a file.
 */
-void arr_to_file(std::string ofile, std::vector<int> arr) {
-   std::ofstream file (ofile);
-   for (int i = 0; i < arr.size(); i++) {
-      file << arr[i] << "\n";
+void arr_to_file(std::string out_file_name, std::vector<int> tour, int cost) {
+   int num_cities = tour.size();
+   std::ofstream out_file;
+   out_file.open(out_file_name.c_str());
+   out_file << cost << std::endl;
+   for(int i = 0; i < num_cities; i++) {
+      out_file << tour[i] << '\n';
    }
+   out_file.close();
 }
